@@ -9,11 +9,11 @@ Install Libraries by inserting following commands in CMD
 1. Robot Framework:
     pip install robotframework
 
-2. Requests
+2. Requests:
     pip install requests
 
-3. Robot Framework Requests
+3. Robot Framework Requests:
     pip install robotframework-requests
 
-4. Robot Framework JSON Library
+4. Robot Framework JSON Library:
     pip install robotframework-jsonlibrary
