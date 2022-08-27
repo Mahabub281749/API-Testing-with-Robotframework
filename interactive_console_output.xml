@@ -1,13 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220826 12:13:20.043" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220827 14:19:28.764" rpa="false" schemaversion="3">
 <suite id="s1" name="Robot Interactive Console" source="c:\Users\Parvez\.vscode\extensions\robocorp.robotframework-lsp-1.1.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
 <test id="s1-t1" name="Default Task/Test" line="5">
 <kw name="Interpreter Main Loop" library="MainLoop">
-<status status="PASS" starttime="20220826 12:13:20.072" endtime="20220826 12:13:30.711"/>
+<kw name="Create Session">
+<arg>mysession</arg>
+<arg>${base_url}</arg>
+<msg timestamp="20220827 14:19:29.609" level="FAIL">No keyword with name 'Create Session' found.</msg>
+<status status="FAIL" starttime="20220827 14:19:29.609" endtime="20220827 14:19:29.610"/>
 </kw>
-<status status="PASS" starttime="20220826 12:13:20.071" endtime="20220826 12:13:30.711"/>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>name=test</arg>
+<arg>salary=123</arg>
+<arg>age=23</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" starttime="20220827 14:19:29.611" endtime="20220827 14:19:29.611"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" starttime="20220827 14:19:29.611" endtime="20220827 14:19:29.611"/>
+</kw>
+<kw name="POST On Session">
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/v1/create</arg>
+<arg>data=${body}</arg>
+<arg>headers=${header}</arg>
+<status status="NOT RUN" starttime="20220827 14:19:29.613" endtime="20220827 14:19:29.613"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>{response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220827 14:19:29.613" endtime="20220827 14:19:29.613"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>{response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220827 14:19:29.613" endtime="20220827 14:19:29.613"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status_code}</var>
+<arg>{response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" starttime="20220827 14:19:29.613" endtime="20220827 14:19:29.613"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status_code}</arg>
+<arg>201</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20220827 14:19:29.613" endtime="20220827 14:19:29.613"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${res_body}</var>
+<arg>{response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" starttime="20220827 14:19:29.613" endtime="20220827 14:19:29.613"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${res_body}</arg>
+<arg>leader</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20220827 14:19:29.613" endtime="20220827 14:19:29.613"/>
+</kw>
+<kw name="Create Session">
+<arg>mysession</arg>
+<arg>${base_url}</arg>
+<msg timestamp="20220827 16:30:04.195" level="FAIL">No keyword with name 'Create Session' found.</msg>
+<status status="FAIL" starttime="20220827 16:30:04.194" endtime="20220827 16:30:04.195"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>name=test</arg>
+<arg>salary=123</arg>
+<arg>age=23</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" starttime="20220827 16:30:04.196" endtime="20220827 16:30:04.196"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" starttime="20220827 16:30:04.196" endtime="20220827 16:30:04.196"/>
+</kw>
+<kw name="POST On Session">
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/v1/create</arg>
+<arg>data=${body}</arg>
+<arg>headers=${header}</arg>
+<status status="NOT RUN" starttime="20220827 16:30:04.198" endtime="20220827 16:30:04.198"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>{response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220827 16:30:04.199" endtime="20220827 16:30:04.199"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>{response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220827 16:30:04.199" endtime="20220827 16:30:04.199"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status_code}</var>
+<arg>{response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" starttime="20220827 16:30:04.199" endtime="20220827 16:30:04.199"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status_code}</arg>
+<arg>201</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20220827 16:30:04.199" endtime="20220827 16:30:04.199"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${res_body}</var>
+<arg>{response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" starttime="20220827 16:30:04.199" endtime="20220827 16:30:04.199"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${res_body}</arg>
+<arg>leader</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20220827 16:30:04.199" endtime="20220827 16:30:04.199"/>
+</kw>
+<status status="PASS" starttime="20220827 14:19:28.790" endtime="20220827 16:30:19.343"/>
+</kw>
+<status status="PASS" starttime="20220827 14:19:28.790" endtime="20220827 16:30:19.343"/>
 </test>
-<status status="PASS" starttime="20220826 12:13:20.045" endtime="20220826 12:13:30.713"/>
+<status status="PASS" starttime="20220827 14:19:28.765" endtime="20220827 16:30:19.344"/>
 </suite>
 <statistics>
 <total>

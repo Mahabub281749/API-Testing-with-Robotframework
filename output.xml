@@ -1,86 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.7.0 on win32)" generated="20220826 19:18:52.640" rpa="false" schemaversion="3">
-<suite id="s1" name="TC1 GET Requests" source="D:\Robot Framework\TestCases\TC1_GET_Requests.robot">
-<test id="s1-t1" name="Get_weatherinfo" line="10">
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220827 16:28:40.026" rpa="false" schemaversion="3">
+<suite id="s1" name="TC2 POST Request" source="d:\API_Test_Robot Framework\TestCases\TC2_POST_Request.robot">
+<test id="s1-t1" name="Create_CustomerInfo" line="10">
 <kw name="Create Session" library="RequestsLibrary">
 <arg>mysession</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220826 19:18:52.832" level="INFO">Creating Session using : alias=mysession, url=https://restcountries.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20220826 19:18:52.832" endtime="20220826 19:18:52.833"/>
+<msg timestamp="20220827 16:28:40.210" level="INFO">Creating Session using : alias=mysession, url=http://dummy.restapiexample.com/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220827 16:28:40.210" endtime="20220827 16:28:40.210"/>
 </kw>
-<kw name="GET On Session" library="RequestsLibrary">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>name=test</arg>
+<arg>salary=123</arg>
+<arg>age=23</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220827 16:28:40.211" level="INFO">${body} = {'name': 'test', 'salary': '123', 'age': '23'}</msg>
+<status status="PASS" starttime="20220827 16:28:40.211" endtime="20220827 16:28:40.211"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220827 16:28:40.212" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20220827 16:28:40.212" endtime="20220827 16:28:40.212"/>
+</kw>
+<kw name="POST On Session" library="RequestsLibrary">
 <var>${response}</var>
 <arg>mysession</arg>
-<arg>/v2/name/${country}</arg>
-<doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20220826 19:18:53.514" level="INFO">GET Request : url=https://restcountries.com/v2/name/Bangladesh 
- path_url=/v2/name/Bangladesh 
- headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
+<arg>/v1/create</arg>
+<arg>data=${body}</arg>
+<arg>headers=${header}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<msg timestamp="20220827 16:28:44.652" level="INFO">POST Request : url=http://dummy.restapiexample.com/api/v1/create 
+ path_url=/api/v1/create 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '27'} 
+ body=name=test&amp;salary=123&amp;age=23 
  </msg>
-<msg timestamp="20220826 19:18:53.515" level="INFO">GET Response : url=https://restcountries.com/v2/name/Bangladesh 
- status=200, reason=OK 
- headers={'Date': 'Fri, 26 Aug 2022 16:18:52 GMT', 'Server': 'Apache/2.4.38 (Debian)', 'Content-Type': 'application/json', 'content-encoding': 'gzip', 'content-length': '626', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive'} 
- body=[{"name":"Bangladesh","topLevelDomain":[".bd"],"alpha2Code":"BD","alpha3Code":"BGD","callingCodes":["880"],"capital":"Dhaka","altSpellings":["BD","People's Republic of Bangladesh","Gônôprôjatôntri Bangladesh"],"subregion":"Southern Asia","region":"Asia","population":164689383,"latlng":[24.0,90.0],"demonym":"Bangladeshi","area":147570.0,"gini":32.4,"timezones":["UTC+06:00"],"borders":["MMR","IND"],"nativeName":"Bangladesh","numericCode":"050","flags":{"svg":"https://flagcdn.com/bd.svg","png":"https://flagcdn.com/w320/bd.png"},"currencies":[{"code":"BDT","name":"Bangladeshi taka","symbol":"৳"}],"languages":[{"iso639_1":"bn","iso639_2":"ben","name":"Bengali","nativeName":"বাংলা"}],"translations":{"br":"Bangladesh","pt":"Bangladeche","nl":"Bangladesh","hr":"Bangladeš","fa":"بنگلادش","de":"Bangladesch","es":"Bangladesh","fr":"Bangladesh","ja":"バングラデシュ","it":"Bangladesh","hu":"Banglades"},"flag":"https://flagcdn.com/bd.svg","regionalBlocs":[{"acronym":"SAARC","name":"South Asian Association for Regional Cooperation"}],"cioc":"BAN","independent":true}] 
+<msg timestamp="20220827 16:28:44.653" level="INFO">POST Response : url=http://dummy.restapiexample.com/api/v1/create 
+ status=406, reason=Not Acceptable 
+ headers={'Content-Type': 'text/html; charset=iso-8859-1', 'Date': 'Sat, 27 Aug 2022 13:28:44 GMT', 'Display': 'staticcontent_sol', 'Expires': 'Fri, 26 Aug 2022 13:28:45 GMT', 'Pagespeed': 'off', 'Response': '406', 'Server': 'nginx', 'Set-Cookie': 'ezCMPCCS=false; Path=/; Domain=restapiexample.com; Expires=Sun, 27 Aug 2023 13:28:45 GMT', 'Vary': 'Accept-Encoding,Origin', 'X-Ezoic-Cdn': 'Miss', 'X-Middleton-Display': 'staticcontent_sol', 'X-Middleton-Response': '406', 'X-Origin-Cache-Control': '', 'X-Sol': 'pub_site', 'Content-Length': '226'} 
+ body=&lt;head&gt;&lt;title&gt;Not Acceptable!&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Not Acceptable!&lt;/h1&gt;&lt;p&gt;An appropriate representation of the requested resource could not be found on this server. This error was generated by Mod_Security.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; 
  </msg>
-<msg timestamp="20220826 19:18:53.515" level="INFO">d:\robot framework\venv\lib\site-packages\urllib3\connectionpool.py:1052: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restcountries.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
-  InsecureRequestWarning,</msg>
-<msg timestamp="20220826 19:18:53.517" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220826 19:18:52.833" endtime="20220826 19:18:53.517"/>
+<msg timestamp="20220827 16:28:44.656" level="FAIL">HTTPError: 406 Client Error: Not Acceptable for url: http://dummy.restapiexample.com/api/v1/create</msg>
+<status status="FAIL" starttime="20220827 16:28:40.213" endtime="20220827 16:28:44.689"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>{response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220827 16:28:44.689" endtime="20220827 16:28:44.689"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>{response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220827 16:28:44.690" endtime="20220827 16:28:44.690"/>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <var>${status_code}</var>
-<arg>${response.status_code}</arg>
+<arg>{response.status_code}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20220826 19:18:53.519" level="INFO">${status_code} = 200</msg>
-<status status="PASS" starttime="20220826 19:18:53.518" endtime="20220826 19:18:53.519"/>
+<status status="NOT RUN" starttime="20220827 16:28:44.690" endtime="20220827 16:28:44.690"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${status_code}</arg>
-<arg>200</arg>
+<arg>201</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220826 19:18:53.519" endtime="20220826 19:18:53.520"/>
-</kw>
-<kw name="Get From Dictionary" library="Collections">
-<var>${ContentValue}</var>
-<arg>${response.headers}</arg>
-<arg>Content-Type</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20220826 19:18:53.521" level="INFO">${ContentValue} = application/json</msg>
-<status status="PASS" starttime="20220826 19:18:53.520" endtime="20220826 19:18:53.521"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${ContentValue}</arg>
-<arg>application/json</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220826 19:18:53.522" endtime="20220826 19:18:53.522"/>
+<status status="NOT RUN" starttime="20220827 16:28:44.691" endtime="20220827 16:28:44.691"/>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
-<var>${body}</var>
-<arg>${response.content}</arg>
+<var>${res_body}</var>
+<arg>{response.content}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20220826 19:18:53.524" level="INFO">${body} = [{"name":"Bangladesh","topLevelDomain":[".bd"],"alpha2Code":"BD","alpha3Code":"BGD","callingCodes":["880"],"capital":"Dhaka","altSpellings":["BD","People's Republic of Bangladesh","G\xc3\xb4n\xc3\xb4p...</msg>
-<status status="PASS" starttime="20220826 19:18:53.523" endtime="20220826 19:18:53.524"/>
+<status status="NOT RUN" starttime="20220827 16:28:44.691" endtime="20220827 16:28:44.691"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
-<arg>${body}</arg>
-<arg>Dhaka</arg>
+<arg>${res_body}</arg>
+<arg>leader</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220826 19:18:53.524" endtime="20220826 19:18:53.525"/>
+<status status="NOT RUN" starttime="20220827 16:28:44.692" endtime="20220827 16:28:44.692"/>
 </kw>
-<status status="PASS" starttime="20220826 19:18:52.831" endtime="20220826 19:18:53.525"/>
+<status status="FAIL" starttime="20220827 16:28:40.209" endtime="20220827 16:28:44.693">HTTPError: 406 Client Error: Not Acceptable for url: http://dummy.restapiexample.com/api/v1/create</status>
 </test>
-<status status="PASS" starttime="20220826 19:18:52.643" endtime="20220826 19:18:53.528"/>
+<status status="FAIL" starttime="20220827 16:28:40.031" endtime="20220827 16:28:44.695"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TC1 GET Requests">TC1 GET Requests</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="TC2 POST Request">TC2 POST Request</stat>
 </suite>
 </statistics>
 <errors>

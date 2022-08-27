@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="384f73fc-12e6-4f7b-bfd7-df9cb9c51ab5" name="Default Changelist" comment="" />
+    <list default="true" id="384f73fc-12e6-4f7b-bfd7-df9cb9c51ab5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,12 +23,23 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1276954634">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="1037" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1036" />
     <option name="width" value="900" />
     <option name="height" value="1030" />
   </component>
@@ -33,21 +48,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Robot Framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Robot Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="API_Test_Robot Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API_Test_Robot Framework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="API_Test_Robot Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API_Test_Robot Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="TestCases" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -76,9 +98,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="830" y="0" width="720" height="824" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2489019" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11235955" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
