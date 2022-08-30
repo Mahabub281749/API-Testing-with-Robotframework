@@ -2,7 +2,8 @@
 
 Pre-requisite:
   1. Python
-  2. Libraries
+  2. Pycharnm
+  3. Libraries
   
 Install Libraries by inserting following commands in CMD<br/><br/>
 
@@ -15,13 +16,13 @@ Install Libraries by inserting following commands in CMD<br/><br/>
 3. Robot Framework Requests:<br/>
         pip install robotframework-requests<br/><br/>
 
-4. Robot Framework JSON Library:
+4. Robot Framework JSON Library:<br/>
         pip install robotframework-jsonlibrary <br/><br/><br/>
 
-Run below commnad in CMD to run the robot file:<br/>
-        robot <foldde name>\<Test name.robot>
+Run below commnad in CMD to run the robot file:<br/><br/>
+        py -m robot <foldde name>\<Test name.robot>
 
-### Test Case 1: GET Request ###
+#### Test Case 1: GET Request ####
 URL: https://restcountries.com
 
 Validations
@@ -29,10 +30,18 @@ Validations
     2) Response Body
     3) Header
 
-### Test Case 2: POST Request ###
+#### Test Case 2: POST Request ####
 URL: https://dummy.restapiexample.com/
 
 Validations
 
     1) Status Code
     2) Response Body
+
+#### Test Case: Games ####
+        1) Pre-Requisite: Install Gradle on Windows
+        2) Graddle Download link:  https://gradle.org/releases/
+        3) VideoGameDB API Download Link: https://github.com/james-willett/Vide...
+        4) How to run application using graddle?
+        E:\VideoGameDB-master\gradlew bootRun
+        5)  URL:  http://localhost:8080/swagger-ui/index.html
