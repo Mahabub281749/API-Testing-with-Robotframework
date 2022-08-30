@@ -1,0 +1,22 @@
+{
+    "firstName":"Mahabub",
+    "lastName":"Hasan",
+    "age":"31",
+    "address":
+    {
+        "streetAddress":"Karakalliontie 2",
+        "city":"Espoo",
+        "postCode":"02620"
+    },
+    "phoneNumber":
+    [
+        {
+            "type":"home",
+            "number":"0000000"
+        },
+        {
+            "type":"Fax",
+            "number":"111111"
+        }
+    ]
+}

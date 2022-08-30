@@ -26,6 +26,7 @@ Run below commnad in CMD to run the robot file:<br/><br/>
 URL: https://restcountries.com
 
 Validations
+
     1) Status Code
     2) Response Body
     3) Header
@@ -38,10 +39,32 @@ Validations
     1) Status Code
     2) Response Body
 
-#### Test Case: Games ####
+#### Test Case 3: Games ####
         1) Pre-Requisite: Install Gradle on Windows
         2) Graddle Download link:  https://gradle.org/releases/
         3) VideoGameDB API Download Link: https://github.com/james-willett/Vide...
         4) How to run application using graddle?
         E:\VideoGameDB-master\gradlew bootRun
         5)  URL:  http://localhost:8080/swagger-ui/index.html
+
+#### Test Case 4: JSON File Validation ####
+
+        1. Validate Data in JSON File
+
+Helping URL: 
+
+        1. https://jsonpathfinder.com/
+        2. http://jsonpath.com
+
+#### Test Case 5: Complex JSON Data Validation ####
+
+        1. Validate Complex Data in JSON Response
+
+Helping URL:         
+
+        1. https://jsonpathfinder.com/
+        2. http://jsonpath.com
+
+Base URL:
+
+        1. https://restcountries.com/v2/name/bangladesh
