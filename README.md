@@ -68,3 +68,17 @@ Helping URL:
 Base URL:
 
         1. https://restcountries.com/v2/name/bangladesh
+
+
+#### Test Case 6: XML File Validation ####
+
+        1. Validate Data in XML File
+
+
+#### Test Case 7: XML Response Validation ####
+
+        1. Validate Data in XML Response
+
+Base URL:
+
+        1. https://www.w3schools.com/xml/note.xml
