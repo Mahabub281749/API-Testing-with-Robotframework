@@ -82,3 +82,31 @@ Base URL:
 Base URL:
 
         1. https://www.w3schools.com/xml/note.xml
+
+
+#### Test Case 8: Headers & Cookies Validation ####
+
+        1. Validate Headers and cookies in API response
+
+Base URL:
+
+        1. https://reqres.in/api/users?page=2
+
+
+#### Test Case 9: Basic Authentication ####
+
+Base URL:
+
+        1. https://postman-echo.com/basic-auth
+
+Username:       postman
+Password:       password
+
+
+#### Test Case 10: Bearer Token Authentication ####
+
+Base URL:
+
+        1. https://certtransaction.elementexpress.com/
+
+Token:  E4F284BFADA11D01A52508ED7B92FFD7EE0905659F5DED06A4B73FC7739B48A287648801
